@@ -1,0 +1,1 @@
+Aqui está sendo desenvolvidos os exercícios do bloco 2, relacionado ao git/github do primeiro módulo.

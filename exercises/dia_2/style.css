@@ -1,0 +1,22 @@
+        body{
+            font-size: 16px;
+        }
+        h1 {
+            font-size: 65px;
+            font-family: sans-serif;
+            color: orange;
+            text-align: center;
+            }
+        p{
+            font-weight: 600;
+            font-size: 3em;
+        }
+        .bg {
+            background-color: gray;
+            font-style: normal;
+            line-height: 1.5;
+            
+        }
+        li {
+            text-decoration: underline;
+        }

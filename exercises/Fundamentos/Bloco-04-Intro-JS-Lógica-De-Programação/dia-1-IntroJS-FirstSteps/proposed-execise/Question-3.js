@@ -1,4 +1,4 @@
-let arr = [1,1];
+let arr = [1,1,3];
 let indice = 0;
 let maior = 0;
 

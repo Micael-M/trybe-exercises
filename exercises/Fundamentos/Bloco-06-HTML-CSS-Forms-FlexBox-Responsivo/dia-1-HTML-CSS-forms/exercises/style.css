@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+  text-align: center;
+  padding-top: 10px;
+  height: 60px;
+}
+
+#form-candidate {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+ fieldset {
+   border-radius: 9px;
+   border: 2px solid rgb(38, 166, 154);
+ }
+
+.data {
+  height: 600px;
+  margin-bottom: 20px;
+}
+
+legend {
+  margin: 15px;
+  font-size: 25px;
+
+}
+
+/* ESTILIZAÇÃO BASE */
+.input-content {
+  position: relative;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid rgb(158, 158, 158);
+  outline: none;
+  transition:  .2s ease-in-out;
+  box-sizing: border-box;
+}
+
+label {
+  top: 0;
+  left: 0; right: 0;
+  color: rgb(97, 97, 97);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 1rem;
+  cursor: text;
+  transition: .2s ease-in-out;
+}
+
+div.select-content {
+  position: absolute;
+}
+
+input, label {
+  width: 93%;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+/* INTERAÇÃO */
+input:valid, 
+input:focus {
+  border-bottom: 2px solid rgb(38, 166, 154);
+}
+
+input:valid + label, 
+input:focus + label {
+  color: rgb(38, 166, 154);
+  font-size: .9rem;
+  top: -20px;
+  pointer-events: none;
+}
+
+.input-content {
+  margin: 10px 70px;
+}

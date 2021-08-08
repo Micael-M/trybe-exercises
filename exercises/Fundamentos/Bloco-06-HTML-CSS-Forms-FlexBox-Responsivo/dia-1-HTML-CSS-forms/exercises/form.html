@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de Currículo</title>
+</head>
+<body>
+  <Header id="header"><h1>CADASTRE SEU CURRÍCULO</h1></Header>
+  <main>
+    <section id="form-contente">
+      <form id="form-candidate" action="" method="GET">
+        <fieldset id="personal-data" class="data">
+          <legend>Dados Pessoais</legend>
+
+          <div class="input-content">
+            <input type="text" name="name" id="full-name" size="40" maxlength="40" required pattern=".+">
+            <label for="full-name">Nome completo</label>
+          </div>
+
+          <div class="input-content">
+            <input type="text" name="email" id="email" size="40" maxlength="50" required pattern=".+">
+            <label for="email">E-mail</label>
+          </div>
+
+          <div class="input-content">
+            <input type="text" name="cpf" id="cpf" size="40" maxlength="11" required pattern=".+">
+            <label for="cpf">CPF</label>
+          </div>
+
+          <div class="input-content">
+            <input type="text" name="adress" id="address" size="40" maxlength="200" required pattern=".+">
+            <label for="address">Endereço</label>
+          </div>
+
+          <div class="input-content">
+            <input type="text" name="city" id="city" size="40" maxlength="28" required pattern=".+">
+            <label for="city">Cidade</label>
+          </div>
+
+          <div class="select-content">
+            <label class="label-states"for="states">Selecione seu estado</label>
+            <select name="estados" id="states">
+
+            </select>
+          </div>
+
+        </fieldset>
+
+        <fieldset id="last-job" class="data">
+          <legend>Último Trabalho</legend>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -28,6 +28,7 @@ export default class App extends Component {
     const { characters } = this.state; // desestruturando o estado. Evita o 'this.state.characters'
     return (
       <div className="App">
+        <h1>Ricky and Morty Characters</h1>
         <div className="body">
           {characters.map(({ name, image, id }) => {
             return (

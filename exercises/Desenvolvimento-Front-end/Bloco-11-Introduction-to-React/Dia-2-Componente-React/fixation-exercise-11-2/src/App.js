@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Order from './Order';
-import products from './data/data'
+// import products from './data/data'
 
 class App extends Component {
   
@@ -12,7 +12,7 @@ class App extends Component {
 
       <div>
         <h1>Pedidos Criados recentemente</h1>
-          <Order order={products} />
+          <Order/>
       </div>
 
       /* <div>  Exercício de fixação do tópico props

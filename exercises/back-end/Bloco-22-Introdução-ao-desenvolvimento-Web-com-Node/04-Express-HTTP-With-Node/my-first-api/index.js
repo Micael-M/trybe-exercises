@@ -2,9 +2,15 @@
 // a função express retorna uma aplicação express
 const express = require('express');
 
+// Importando o body-parser
+ const bodyParser = require('body-parser');
+
 // 2° Passo - o app recebe o retorno da função express que
 // cria um servidor e já executa
 const app = express();
+
+// Iniciando o Body-parser - middware
+app.use(bodyParser.json());
 
 // Array com dados para fazer o CRUD
 const books = [
@@ -53,12 +59,41 @@ app.get('/book/:id', (req, res) => {
 });
 
 // 2ª Rota do CRUD - GET em /book - app.get(rota, middware)
-// para buscar o livro pelo autor.
-app.get('/books/search', function (_req, res) {
+// para buscar o livro pelo autor. Esta busca é feita via
+// query string no formato http://localhost:3001/books/search?author=query
+// exemplo: http://localhost:3001/books/search?author=Isaac Asimov
+app.get('/books/search', function (req, res) {
   const { author } = req.query;
   const filteredBooks = books.filter((b) => b.author === author);
-  if (filteredBooks.length === 0) return res.status(200).json({ message: 'Author not found!' })
+  if (filteredBooks.length === 0) return res.status(200).json({ message: `'The book with author ${author} was not found!'` })
   res.status(200).json({ books: filteredBooks });
+});
+
+// 3ª Rota do CRUD - POST em /books - app.post(rota, middware)
+app.post('/books', function (req, res) {
+  const { id, title, author } = req.body;
+  books.push({ id, title, author });
+  res.status(201).json({ message: 'Book created!'});
+});
+
+// 4ª Rota do CRUD - PUT em /books - app.post(rota, middware)
+app.put('/books/:id', function (req, res) {
+  const { id } = req.params;
+  const { title, author } = req.body;
+  const bookIndex = books.findIndex((b) => b.id === +id);
+  if (bookIndex === -1) return res.status(404).send({ message: "Book not found!" });
+  books[bookIndex] = { id, title, author };
+  // O end() é aplicado quando se deseja apenas retornar o status sem nenhuma msg.
+  res.status(204).end();
+});
+
+// 5ª Rota do CRUD - DELETE em /books - app.post(rota, middware)
+app.delete('/books/:id', function (req, res) {
+  const { id } = req.params;
+  const bookIndex = books.findIndex((b) => b.id === +id);
+  if (bookIndex === -1) return res.status(404).send({ message: "Book not found!" });
+  books.splice(bookIndex, 1);
+  res.status(204).end();
 });
 
 

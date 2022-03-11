@@ -19,3 +19,6 @@ console.log(`Retângulo de base 100cm e altura 200cm: ${Exercise.rectangle(10, 2
 
 
 // Compilando o código desenvolvido via: npx tsc
+// Será gerado um diretório dist com o código transpilado
+
+// Utilizando o node para executar o código atravéz de: node ./dist/index.js

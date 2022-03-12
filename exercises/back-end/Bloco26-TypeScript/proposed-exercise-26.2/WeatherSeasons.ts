@@ -2,8 +2,8 @@
 
 enum WeatherSeasons {
   OUTONO = "Outono",
-    INVERNO = "Inverno",
-    PRIMAVERA = "Primavera",
-    VERAO = "Verão",
+  INVERNO = "Inverno",
+  PRIMAVERA = "Primavera",
+  VERAO = "Verão",
 }
 export default WeatherSeasons;

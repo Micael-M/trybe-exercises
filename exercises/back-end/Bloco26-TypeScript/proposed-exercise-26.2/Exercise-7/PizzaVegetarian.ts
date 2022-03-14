@@ -1,4 +1,4 @@
-import Pizza from "../Pizza";
+import Pizza from "../Exercise-6/Pizza";
 import { Vegetarian } from "./PizzaFlavorsTypes";
 
 interface PizzaVegetarian extends Pizza{

@@ -17,3 +17,6 @@ const nutela: Pizza = {
   slices: 4
 }
 console.log(nutela);
+
+
+
